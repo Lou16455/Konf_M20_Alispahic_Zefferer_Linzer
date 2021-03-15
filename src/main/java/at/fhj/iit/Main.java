@@ -31,5 +31,27 @@ public class Main {
         f.setFlavour("sweet-sour");
         f.setKind("fruit");
         f.printFood();
+
+
+        Snacks s = new Snacks ("chips") {
+            @Override
+            public double getVolume() {
+                return 0;
+            }
+
+            @Override
+            public double getAlcoholPercent() {
+                return 0;
+            }
+
+            @Override
+            public boolean isAlcoholic() {
+                return false;
+            }
+        };
+        s.setTaste("salty");
+        s.setTexture("crispy");
+        s.printSnacks();
+
     }
 }

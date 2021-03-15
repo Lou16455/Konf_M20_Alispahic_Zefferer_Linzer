@@ -53,5 +53,24 @@ public class Main {
         s.setTexture("crispy");
         s.printSnacks();
 
+        Concerts c = new Concerts ("concert") {
+            @Override
+            public double getVolume() {
+                return 0;
+            }
+
+            @Override
+            public double getAlcoholPercent() {
+                return 0;
+            }
+
+            @Override
+            public boolean isAlcoholic() {
+                return false;
+            }
+        };
+        c.setKind("Jazz");
+        c.setBand("Herbie Hancock");
+        c.printConcerts();
     }
 }

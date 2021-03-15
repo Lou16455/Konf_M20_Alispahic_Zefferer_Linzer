@@ -10,5 +10,26 @@ public class Main {
 
         Drink d = new SimpleDrink("Rotwein",l);
         System.out.println(d);
+
+
+        Food f = new Food("ananas") {
+            @Override
+            public double getVolume() {
+                return 0;
+            }
+
+            @Override
+            public double getAlcoholPercent() {
+                return 0;
+            }
+
+            @Override
+            public boolean isAlcoholic() {
+                return false;
+            }
+        };
+        f.setFlavour("sweet-sour");
+        f.setKind("fruit");
+        f.printFood();
     }
 }

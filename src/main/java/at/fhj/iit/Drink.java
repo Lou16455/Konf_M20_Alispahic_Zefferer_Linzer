@@ -13,12 +13,17 @@ public abstract class Drink {
     /**
      * Creates a Drink object with given name, e.g. juice or orange juice
      *
+     * @param quantity
+     * @param kind
      * @param name name of the drink
      *
      */
 
-    public Drink(String name) {
+    public Drink(int quantity, String kind, String name) {
         this.name = name;
+    }
+
+    protected Drink() {
     }
 
     /**

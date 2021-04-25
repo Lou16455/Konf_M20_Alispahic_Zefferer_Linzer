@@ -1,5 +1,4 @@
 package at.fhj.iit;
-
 public abstract class Concerts extends Drink{
 
     String kind;

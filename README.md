@@ -5,3 +5,5 @@ Sadzida filled the Food class. It prints the food name, flavour and kind of the 
 Chiara filled the Snacks class. It prints the snack name, texture and taste of the food that fits to the drinks.
 Lukas filled the Concerts class. It prints the Concert name, kind of music and the name of the band.
 Sadzida made a FoodTest branch. 
+Sadzida updated the Food.java, Main.java and created a FoodTest.java. I tested all the methods from the Food.java
+and completed all of them (7). Then added these 3 classes to git.  

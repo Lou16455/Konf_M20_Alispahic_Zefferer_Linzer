@@ -33,7 +33,7 @@ public class Main {
         f.printFood();
 
 
-        Snacks s = new Snacks ("chips") {
+        Snacks s = new Snacks ("chips", "crispy", "salty") {
             @Override
             public double getVolume() {
                 return 0;
@@ -49,8 +49,6 @@ public class Main {
                 return false;
             }
         };
-        s.setTaste("salty");
-        s.setTexture("crispy");
         s.printSnacks();
 
         Concerts c = new Concerts ("concert") {

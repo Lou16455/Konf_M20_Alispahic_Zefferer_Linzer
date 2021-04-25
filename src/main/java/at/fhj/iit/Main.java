@@ -12,7 +12,7 @@ public class Main {
         System.out.println(d);
 
 
-        Food f = new Food("ananas") {
+        Food f = new Food("ananas", "sweet-sour", "fruit") {
             @Override
             public double getVolume() {
                 return 0;
@@ -28,8 +28,7 @@ public class Main {
                 return false;
             }
         };
-        f.setFlavour("sweet-sour");
-        f.setKind("fruit");
+
         f.printFood();
 
 

@@ -53,7 +53,7 @@ public class Main {
         s.setTexture("crispy");
         s.printSnacks();
 
-        Concerts c = new Concerts ("concert") {
+        Concerts c = new Concerts ("concert", "Jazz","Black Coffee") {
             @Override
             public double getVolume() {
                 return 0;
@@ -69,8 +69,6 @@ public class Main {
                 return false;
             }
         };
-        c.setKind("Jazz");
-        c.setBand("Herbie Hancock");
         c.printConcerts();
     }
 }

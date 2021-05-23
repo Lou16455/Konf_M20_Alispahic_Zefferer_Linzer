@@ -22,7 +22,7 @@ public class SimpleDrink extends Drink{
     }
 
     /**
-     * Returns volume of liquid l
+     * d lReturns volume of liqui
      *
      * @return the volume of drink in litre
      */

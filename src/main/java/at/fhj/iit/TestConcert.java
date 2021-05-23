@@ -4,23 +4,43 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 @DisplayName("Testing Concerts implementation")
+
+/**
+ * inits a Concert for EACH test
+ */
+
 public class TestConcert {
-    private Concerts name, name2;
+
     /**
-     * inits a Concert for EACH test
+     *uses two names of concert
+     *
      */
+    private Concerts name, name2;
+
+    /**
+     *sets up the concerts
+     */
+
     @BeforeEach
     void setup() {
         // SETUP PHASE
         name= new Concerts("Denzel", "rappy", "Hip Hop");
         name2 = new Concerts("Bob Marley", "soft", "sweet");
     }
+
+    /**
+     *sets up the testing contructor
+     */
     @Test
     @DisplayName("Testing constructor")
     public void testConstructor() {
         assertEquals("Denzel", name.getName());
         assertEquals("Bob Marley", name2.getName());
     }
+
+    /**
+     *tests for getters and setters
+     */
     @Test
     @DisplayName("Test name getter")
     public void testNameGetter(){

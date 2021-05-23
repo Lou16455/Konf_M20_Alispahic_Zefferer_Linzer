@@ -8,10 +8,22 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Testing Snacks implementation")
+
+/**
+ * class inits a snack for EACH test
+ */
+
 public class SnacksTest {
-    private Snacks chips, chocolate;
+
     /**
-     * inits a snack for EACH test
+     *uses two different snacks
+     *
+     */
+    private Snacks chips, chocolate;
+
+    /**
+     *sets up the snacks
+     *
      */
     @BeforeEach
     void setup() {
@@ -19,12 +31,22 @@ public class SnacksTest {
         chips = new Snacks("Chips", "crispy", "salty");
         chocolate = new Snacks("Chocolate", "soft", "sweet");
     }
+
+    /**
+     *sets up the tests
+     *
+     */
     @Test
     @DisplayName("Testing constructor")
     public void testConstructor() {
         assertEquals("Chips", chips.getName());
         assertEquals("Chocolate", chocolate.getName());
     }
+
+    /**
+     *tests for getters
+     *
+     */
     @Test
     @DisplayName("Test name getter")
     public void testNameGetter(){

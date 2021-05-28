@@ -71,3 +71,11 @@ Third exercise:
 
 We deleted .DS_Store and haim.iml, updated the .gitignore(.DS_Store & *.iml) structured README.md and added JavaDoc comments to the classes.  
 
+
+28.05.2021
+
+
+We created the Branch cashRegister. In IntelliJ we created the class Registrierkassa. We also implemented 3 Interfaces named "WeakDrink", "StrongDrink" and 
+"NonAlc" with the methods date, person and price. After that in the class Registierkassa we implemented different methods. First one for the total sales for
+each drink, second one for the sales on a date, which is a parameter. Third one for the total sales of a person and the fourth one for the sales of a person
+on a date as a para parameter. Our Event has only two dates, that's why we as a variable of the form Date only have two. There are three stands, each with one person and one kind of drink. Chiara sells the strong alcoholic drinks, Lukas the weak drinks and Sadzida the non alcoholic ones. 

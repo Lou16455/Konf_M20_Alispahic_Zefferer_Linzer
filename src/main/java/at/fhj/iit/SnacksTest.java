@@ -43,10 +43,7 @@ public class SnacksTest {
         assertEquals("Chocolate", chocolate.getName());
     }
 
-    /**
-     *tests for getters
-     *
-     */
+    c
     @Test
     @DisplayName("Test name getter")
     public void testNameGetter(){

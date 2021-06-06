@@ -11,12 +11,15 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 
+/**
+ * Testing Registrierkasse complete Test Coverage
+ */
+
 @DisplayName("Testing Registrierkasse implementation")
 
 /**
  * class inits a price for EACH test
  */
-
 
 public class RegistrierkasseTest {
 
@@ -39,7 +42,9 @@ public class RegistrierkasseTest {
      * tests for methods
      */
 
-
+    /**
+     * tests the total sales of a person on a specific date
+     */
     @Test
     @DisplayName("test total sales a person made")
     public void personSalesDate() {
@@ -56,6 +61,10 @@ public class RegistrierkasseTest {
         assertEquals(reg.personSalesDate("Sadzida", reg.getDate()), 60);
     }
 
+    /**
+     * tests the total sales of a person
+     */
+
     @Test
     @DisplayName("test total sales a person made")
     public void personSales() {
@@ -66,6 +75,9 @@ public class RegistrierkasseTest {
         assertEquals(reg.personSales("Sadzida"), 90);
     }
 
+    /**
+     * tests the total sales of all products on a date
+     */
 
     @Test
     @DisplayName("test total sales on a day")
@@ -77,6 +89,9 @@ public class RegistrierkasseTest {
                 reg.getF(), reg.getC()), 54120);
     }
 
+    /**
+     * tests the total sales of food products
+     */
 
     @Test
     @DisplayName("test total sales food")
@@ -84,11 +99,19 @@ public class RegistrierkasseTest {
         assertEquals(reg.totalSalesFood(), 90);
     }
 
+    /**
+     * tests the total sales of concert tickets
+     */
+
     @Test
     @DisplayName("test total sales concert")
     public void totalSalesConcert() {
         assertEquals(reg.totalSalesConcert(), 66000);
     }
+
+    /**
+     * tests the total sales of snacks products
+     */
 
     @Test
     @DisplayName("test total sales snacks")
@@ -97,7 +120,10 @@ public class RegistrierkasseTest {
         assertEquals(reg.totalSalesSnacks(), 110);
     }
 
-    // strings: true, string.equals s
+    /**
+     * tests the total sales on a date
+     */
+
     @Test
     @DisplayName("Test total sales on a day")
     public void totalSales() {

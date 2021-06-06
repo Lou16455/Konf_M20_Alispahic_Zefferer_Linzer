@@ -85,3 +85,4 @@ person and one kind of a product. Chiara sells snacks, Lukas the concert-tickets
 06.06.2021
 
 We generated tests for the Registrierkassa class. There was not a 100% test coverage (see above). We pushed the Branch cashRegister in the main branch. 
+Added JavaDoc comments and pushed. 

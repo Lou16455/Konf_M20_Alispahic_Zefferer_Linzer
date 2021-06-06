@@ -1,10 +1,12 @@
 package at.fhj.iit;
 
+import java.util.Date;
+
 /**
  * this class creates a snacks object
  *
  */
-public  class Snacks extends Drink{
+public  class Snacks extends Drink implements SellDrinks{
 
     /**
      * uses texture and taste
@@ -24,6 +26,28 @@ public  class Snacks extends Drink{
         super.name = name;
         this.texture = texture;
         this.taste = taste;
+    }
+
+    @Override
+    public double getPrice(Object s) {
+        if(s instanceof Snacks){
+            return 5;
+        }else if (s instanceof Concerts){
+            return 600;
+        }else if (s instanceof Food){
+            return 20;
+        }
+        return 0;
+    }
+
+    @Override
+    public Date getDate(Date d) {
+        return d;
+    }
+
+    @Override
+    public String getNamePerson(String o) {
+        return o;
     }
 
     /**

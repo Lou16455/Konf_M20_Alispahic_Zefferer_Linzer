@@ -5,29 +5,62 @@ import java.util.Date;
  cash register class for the protocol  of the prices, date and cashier
  */
 
-public abstract class Registrierkasse implements NonAlcoholic , StrongDrink, WeakDrink {
+public class Registrierkasse {
 
     /**
      * two dates, because our two-day-event
      */
-    private Date date;
-    private Date date1;
+    private Date date = new Date();
+    private Date date1 = new Date();
+    private Snacks s;
+    private Concerts c;
+    private Food f;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public Date getDate1() {
+        return date1;
+    }
+
+    public Snacks getS() {
+        return s;
+    }
+
+    public Concerts getC() {
+        return c;
+    }
+
+    public Food getF() {
+        return f;
+    }
+
+    public Registrierkasse(){
+       date.setYear(2020);
+       date.setMonth(4);
+       date1 = new Date(System.currentTimeMillis());
+       s =  new Snacks("chips", "crispy", "salty");
+       c = new Concerts("Heidi", "rap", "Heidi-Band");
+       f = new Food("ananas", "sour", "fruit");
+    }
     /**
      @param date and name of the person
      @return total sales of a person
      */
-    public double personSales(String name, Date date){
+    public double personSalesDate(String name, Date date){
+
 
         switch (name){
             case "Chiara":
-                return totalSales("strong", date);
+                return totalSales(s, date);
 
             case "Lukas":
 
-                return totalSales("weak", date);
+                return totalSales(c, date);
 
             case "Sadzida":
-                return totalSales("nonAlc", date);
+                return totalSales(f, date);
         }
         return 0;
     }
@@ -41,13 +74,13 @@ public abstract class Registrierkasse implements NonAlcoholic , StrongDrink, Wea
 
         switch (name){
             case "Chiara":
-                return totalSales("strong", date) + totalSales("strong", date1);
+                return totalSalesSnacks();
 
             case "Lukas":
-                return totalSales("weak", date) + totalSales("weak", date1);
+                return totalSalesConcert();
 
             case "Sadzida":
-                return totalSales("nonAlc", date) + totalSales("nonAlc", date);
+                return totalSalesFood();
         }
         return 0;
     }
@@ -56,95 +89,53 @@ public abstract class Registrierkasse implements NonAlcoholic , StrongDrink, Wea
      @param date
      @return total sales of a date
      */
-    public double salesDate(Date date){
-        return totalSales("nonAlc", date) + totalSales("weak", date)+ totalSales("strong", date);
+    public double salesDate(Date date, Snacks s, Food f, Concerts c){
+        return totalSales(s, date) + totalSales(f, date)+ totalSales(c, date);
     }
 
     /**
      @return total sales of non alcoholic drinks
      */
-    public double totalSalesNonAlc(){
-         return totalSales("nonAlc", date) + totalSales("nonAlc", date1);
+    public double totalSalesFood(){
+
+        return totalSales(f, date) + totalSales(f, date1);
     }
 
     /**
      @return total sales of weak drinks
      */
-    public double totalSalesWeak(){
-        return totalSales("weak", date) + totalSales("weak", date1);
+    public double totalSalesConcert(){
+
+        return totalSales(c, date) + totalSales(c, date1);
     }
 
     /**
      @return total sales of strong drinks
      */
-    public double totalSalesStrong(){
-        return totalSales("strong", date) + totalSales("strong", date1);
+    public double totalSalesSnacks(){
+
+        return totalSales(s, date) + totalSales(s, date1);
     }
 
     /**
      @return total sales
      */
-    public double totalSales(String s, Date date){
+    public double totalSales(Object s, Date date){
 
-        switch (s){
-            case "weak":
-                if(date == date)
+        if (s instanceof Snacks) {
+            if (date.equals(date1))
                 return 50;
-                else  return 60;
-
-            case "strong":
-                if(date == date)
-                    return 30;
-                else  return 40;
-
-            case "nonAlc":
-                if(date == date)
-                    return 60;
-                else  return 80;
+            else return 60;
+        } else if (s instanceof Food) {
+            if (date.equals(date1))
+                return 30;
+            else return 60;
+        } else if (s instanceof Concerts) {
+            if (date.equals(date1))
+                return 12000;
+            else return 54000;
         }
         return 0;
     }
 
-    /**
-     @return the price of the non alcoholic drink
-     */
-
-    @Override
-    public double priceNonAlc() {
-        return 5;
-    }
-
-    /**
-     @return the current date
-     */
-    @Override
-    public Date date() {
-        Date date = new Date(System.currentTimeMillis());
-        return date;
-    }
-
-    /**
-    @return the price of the weak drink
-     */
-
-    @Override
-    public double priceStrong() {
-        return 15;
-    }
-    /**
-    @return the price of the weak drink
-     */
-    @Override
-    public double priceWeak() {
-        return 10;
-    }
-
-    /**
-    @param s of the person
-    @return string name of the person
- */
-    @Override
-    public String person(String s) {
-        return s;
-    }
 }

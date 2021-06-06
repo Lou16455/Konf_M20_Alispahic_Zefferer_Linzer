@@ -1,12 +1,14 @@
 package at.fhj.iit;
 
+import java.util.Date;
+
 /**
  * This class creates food that is compatible with drinks
  *
  *
  */
 
-public class Food extends Drink{
+public class Food extends Drink implements SellDrinks{
     /**
      * uses kind and flavour
      */
@@ -24,6 +26,28 @@ public class Food extends Drink{
         this.kind = kind;
         this.flavour = flavour;
 
+    }
+
+    @Override
+    public double getPrice(Object s) {
+        if(s instanceof Snacks){
+            return 5;
+        }else if (s instanceof Concerts){
+            return 600;
+        }else if (s instanceof Food){
+            return 20;
+        }
+        return 0;
+    }
+
+    @Override
+    public Date getDate(Date d) {
+        return d;
+    }
+
+    @Override
+    public String getNamePerson(String o) {
+        return o;
     }
 
     /**

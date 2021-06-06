@@ -75,7 +75,13 @@ We deleted .DS_Store and haim.iml, updated the .gitignore(.DS_Store & *.iml) str
 28.05.2021
 
 
-We created the Branch cashRegister. In IntelliJ we created the class Registrierkassa. We also implemented 3 Interfaces named "WeakDrink", "StrongDrink" and 
-"NonAlc" with the methods date, person and price. After that in the class Registierkassa we implemented different methods. First one for the total sales for
-each drink, second one for the sales on a date, which is a parameter. Third one for the total sales of a person and the fourth one for the sales of a person
-on a date as a para parameter. Our Event has only two dates, that's why we as a variable of the form Date only have two. There are three stands, each with one person and one kind of drink. Chiara sells the strong alcoholic drinks, Lukas the weak drinks and Sadzida the non alcoholic ones. 
+We created the Branch cashRegister. In IntelliJ we created the class Registrierkassa. We also implemented an Interfaces named "SellDrinks" with the methods
+date, person and price. After that in the class Registierkassa we implemented different methods. First one for the total sales for
+each concert, food and snack, second one for the all the sales on a date, which is a parameter. Third one for the total sales of a person and the fourth one for the sales of a person
+on a date as a parameter. Our Event has only two dates, that's why we as a variable of the form Date only have two. There are three stands, each with one
+person and one kind of a product. Chiara sells snacks, Lukas the concert-tickets and Sadzida the Food. Each Food, Snacks and Concerts have the same price.  
+
+
+06.06.2021
+
+We generated tests for the Registrierkassa class. There was not a 100% test coverage (see above). We pushed the Branch cashRegister in the main branch. 
